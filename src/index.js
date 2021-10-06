@@ -1,18 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+const myname  = "Abhishek"
+
 ReactDOM.render(
   <>
-    <h1>Abhishek Pal</h1>
-    <hr/>
-    <h2>Favourite anime series</h2>
-    <ol>
-      <li>Death note</li>
-      <li>Attack on Titan</li>
-      <li>Jujutsu kaisen</li>
-      <li>Dragon ball</li>
-      <li>Naruto</li>
-    </ol>
+   <h1>my name is {myname}</h1>
+   <p>my age is {10+10}</p>
+   <p>my age is {Math.random()}</p>
   </>,
   document.getElementById("root")
 );
