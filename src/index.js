@@ -1,13 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDom from "react-dom";
 
-const myname  = "Abhishek"
-const myrole = "Software developer"
+const name = "Abhishek Pal"
+const date = new Date().toLocaleDateString();
+const time = new Date().toLocaleTimeString();
 
-ReactDOM.render(
+ReactDom.render(
   <>
-   <h1>{`my name is ${myname} ${myrole}`}</h1>
-   <p>my age is {10+10}</p>
+  <h1> Hello ,My name is {name}</h1>
+  <h2>today Date is {date}</h2>
+  <h3>today Date is {time}</h3>
   </>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
