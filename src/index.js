@@ -1,20 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
+// const arr = ["Abhi","Hackur","Rectify","Slugify"]
+//In React, v16 its possible for render()
+//to return an array of elements.
 
 ReactDOM.render(
-  <h1>
-    Abhishek Pal
-  </h1>
-,
-  document.getElementById('root')
+  [
+    <h1>Abhishek Pal</h1>,
+    <h2>I m Trying something different</h2>,
+    <p>This is me</p>
+  ],
+  document.getElementById("root")
 );
-
-// ReactDOM.render(
-//   React.createElement("h1",null,"Abhishek Pal"),
-//   document.getElementById('root')
-// )
-
-// var h1 = document.createElement('h1');
-// h1.innerHTML = "Abhishek PAl";
-// document.getElementById('root').appendChild(h1);
