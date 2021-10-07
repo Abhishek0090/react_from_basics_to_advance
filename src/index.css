@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: rgb(137, 192, 243);
+}
+
+.design{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0px;
+ 
+}
