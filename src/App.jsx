@@ -1,20 +1,23 @@
+import React from "react";
+import Card from "./Card";
+import animeData from "./animeData";
 
- const cal = {
-    add : function(a,b) {
-        let sum = a + b;
-        return sum;
-    },
-    sub : function (a,b) {
-        let sub = a-b;
-        return sub;
-    },
-    mul : function (a,b) {
-        let mul = a*b;
-        return mul;
-    },
-    div : function (a,b) {
-        let div = a/b;
-        return div;
-    }
-}
-export default cal;
+const App = () => (
+    <>
+      <h1 className="heading_style">List of Top 3 Anime Series</h1>
+      {animeData.map((val) => {
+        return (
+          <Card
+            key={val.id}
+            imgsrc={val.imgsrc}
+            title={val.title}
+            animeName={val.animeName}
+            link={val.link}
+          />
+        );
+      })}
+      ;
+    </>
+);
+
+export default App;
