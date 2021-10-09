@@ -1,37 +1,21 @@
-import React from "react";
-import Card from "./Card";
-import animeData from "./animeData";
-import Netflix from "./Netflix";
-import Japanese from "./Japanese";
+import React from 'react'
+import SlotM from './SlotM'
 
-const favName = "Netflix";
 
-// const FavS = () => {
-//   if (favName === "Netflix") {
-//     return <Netflix />;
-//   } else {
-//     return <Japanese />;
-//   }
-// };
+const App = () => {
+    return (
+        <>
+         <h1 className="heading_style"> 🎰 Welcome to <span style={{fontWeight:"bold",backgroundColor: "rgb(255, 214, 214)"}} >Slot Machine Game</span> 🎰</h1>   
+         <div className="slotMachine">
+         <SlotM x="😊" y="😊" z="😊"/>
+         <hr/>
+         <SlotM x="😍" y="😆" z="😛"/>
+         <hr/>
+         <SlotM x="😃" y="😃" z="😃"/>
+         <hr/>
+         </div>
+        </>
+    )
+}
 
-const App = () => (
-  <>
-    <h1 className="heading_style">List of Top 3 Anime Series</h1>
-    {/* <FavS /> */}
-    {favName === "Netflix"?<Netflix/>:<Japanese/>}
-    {/* {animeData.map((val) => {
-        return (
-          <Card
-            key={val.id}
-            imgsrc={val.imgsrc}
-            title={val.title}
-            animeName={val.animeName}
-            link={val.link}
-          /> */}
-    {/* );
-      })} */}
-    ;
-  </>
-);
-
-export default App;
+export default App
