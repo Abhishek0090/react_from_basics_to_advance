@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const App = () => {
-    let [count, setCount] = useState(0)
-    const IncNum = ()=>{
-            setCount(count++)
-    }
-    return (
-       <>
-       <div className="div_style">
-       <h1>{count}</h1>
-       <button className="btn" onClick={IncNum}>Click Here</button>
-       </div>
-        </>
-    )
-}
+  var currTime = new Date().toLocaleTimeString();
 
-export default App
+  const [time, setTime] = useState(currTime);
+
+  const onTime = () => {
+    setTime(currTime);
+  };
+  return (
+    <>
+      <div className="div_style">
+        <h1 className="heading_style">{time}</h1>
+        <button href="/" className="btn" onClick={onTime}>
+          Show time
+        </button>
+      </div>
+    </>
+  );
+};
+
+export default App;
