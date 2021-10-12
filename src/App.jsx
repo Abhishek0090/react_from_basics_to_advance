@@ -1,19 +1,16 @@
-import React from 'react'
-import SlotM from './SlotM'
-
+import React, { useState } from 'react'
 
 const App = () => {
+    let [count, setCount] = useState(0)
+    const IncNum = ()=>{
+            setCount(count++)
+    }
     return (
-        <>
-         <h1 className="heading_style"> 🎰 Welcome to <span style={{fontWeight:"bold",backgroundColor: "rgb(255, 214, 214)"}} >Slot Machine Game</span> 🎰</h1>   
-         <div className="slotMachine">
-         <SlotM x="😊" y="😊" z="😊"/>
-         <hr/>
-         <SlotM x="😍" y="😆" z="😛"/>
-         <hr/>
-         <SlotM x="😃" y="😃" z="😃"/>
-         <hr/>
-         </div>
+       <>
+       <div className="div_style">
+       <h1>{count}</h1>
+       <button className="btn" onClick={IncNum}>Click Here</button>
+       </div>
         </>
     )
 }
