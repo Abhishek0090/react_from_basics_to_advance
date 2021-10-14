@@ -69,14 +69,13 @@
 }
 .btn{
   color: white;
+  line-height: 23px;
   background-color: purple;
   margin: 5px 2px;
-  padding: 10px 10px;
+  border: 2px solid pink;
+  padding: 10px 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  letter-spacing: 2px;
-  font-weight: 500;
   border-radius: 6px;
-  text-transform: uppercase;
   cursor: pointer;
   outline: none;
 }
@@ -113,4 +112,11 @@
   width: 100%;
   margin: auto;
   height: 100vh;
+}
+
+input{
+  margin: 7 px;
+  padding : 10px;
+  outline: none;
+  width: 30%;
 }
