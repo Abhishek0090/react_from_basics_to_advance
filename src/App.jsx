@@ -1,23 +1,35 @@
 import React, { useState } from "react";
 
 const App = () => {
-  const [name, setName] = useState("hello");
-  const [Mname, setMname] = useState("");
-  const [Lname, setLname] = useState("");
-  const [last, setLast] = useState("");
+  const [fullName, setFullName] = useState({
+    fname : '',
+    lname : ''
+  });
 
   const inputEvent = (e) => {
-    setName(e.target.value);
+
+    const value = e.target.value
+    const name = e.target.name 
+      setFullName((preValue)=>{
+        // console.log(preValue)
+        if(name === 'fName'){
+            return{
+                fname : value,
+                lname : preValue.lname
+            }
+        }
+        else if(name === 'lName'){
+            return{
+                fname : preValue.fname,
+                lname : value
+            }
+        }
+      })
   };
 
-  const inputLast = (e) => {
-    setLast(e.target.value);
-  };
 
   const onSubmit = (e) => {
     e.preventDefault(); //to prevent default reload after submitting
-    setMname(name);
-    setLname(last)
   };
 
   return (
@@ -25,20 +37,22 @@ const App = () => {
       <div>
         <form action="" onSubmit={onSubmit}>
           <div className="div_style">
-            <h1 style={{ textAlign: "center" }}>Hello {Mname} {Lname}</h1>
+            <h1 style={{ textAlign: "center" }}>Hello {fullName.fname} {fullName.lname}</h1>
             <input
               type="text"
               placeholder="Enter Your Name"
+              name = "fName"
               onChange={inputEvent}
-              value={name}
+              value={fullName.fname}
             />
             <input
               type="text"
               placeholder="Enter Your LastName"
-              onChange={inputLast}
-              value={last}
+              name = "lName"
+              onChange={inputEvent}
+              value={fullName.lname}
             />
-            
+           
             <button type="submit" className="btn">
               Submit 🤩
             </button>
