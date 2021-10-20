@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDom from "react-dom";
 import "./index.css";
-import App from "./App"
+import Appp from "./Appp"
+import Incdec from "./Incdec";
 
 
 ReactDom.render(
-  <App/>,
+  <Appp/>,
   document.getElementById("root")
 );
